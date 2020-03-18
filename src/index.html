@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="favicon.ico" type="image/ico">
+	<title>Видеосервис</title>
+</head>
+<body>
+	<div class="container">
+		<header class="header">
+			<div class="header-container">
+				<div class="header__column header__column_col_1">
+					<a href="#" class="header-link">
+						<div class="header-link__container">
+							<img src="./assets/img/videoservice.jpg" class="header-link__logo" alt="Логотип Видеосервис" width="36" height="37">
+							<span class="header-link__title">Видеосервис</span>
+						</div>						
+					</a>
+					<!-- <a href="#" class="header-link">Видеосервис</a> -->
+				</div>
+				<div class="header__column header__column_col_2">
+					<form id="search-form" action="#" class="searchform">
+						<div class="searchform__container">
+							<input type="text" class="searchform__input" placeholder="Поиск...">
+							<button class="searchform__button" aria-label="Введите запрос">Найти</button>
+						</div>
+					</form>
+				</div>
+				<div class="header__column header__column_col_3">
+					<div class="profile-container">
+						<div class="profile-name"></div>
+						<button class="profile-button">Войти</button>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="main">
+			<div class="tabs">
+				<div class="tabs__nav tabs-nav">
+					<div class="tabs-nav__item is-active" data-tab-name="tab-1">Фильмы</div>
+					<div class="tabs-nav__item" data-tab-name="tab-2">Телеканалы</div>
+				</div>
+				<div class="tabs__content">
+					<div class="tab is-active tab-1">
+						<section class="newfilms">
+							<h2 class="newfilms-rubric newfilms-rubric_img">Новинки</h2>
+							<div class="newfilms-content">
+								<article class="newfilms-content__item">
+									<a class="newfilm-link" href="#">
+										<img src="./assets/img/mult-103.jpg" alt="мультфильм, выпуск 103" width="280" height="370">
+										<div class="newfilm-link__container">													
+											<p class="newfilm-link__text newfilm-link__text_inner">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus, repellendus aut error soluta laboriosam harum, est vitae praesentium, voluptatem quam non? Est animi deleniti laborum, sed fugit neque cum labore?</p>
+										</div>											
+									</a>
+									<a href="#"><h4 class="newfilm-link__text">Мульт в кино. Выпуск №103. Некогда грустить!</h4></a>
+								</article>
+								<article class="newfilms__content_item">
+									<a class="newfilm-link" href="#">
+										<img src="./assets/img/batman.jpg" alt="мультфильм, выпуск 103" width="280" height="370">
+										<div class="newfilm-link__container">													
+											<p class="newfilm-link__text newfilm-link__text_inner">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus, repellendus aut error soluta laboriosam harum, est vitae praesentium, voluptatem quam non? Est animi deleniti laborum, sed fugit neque cum labore?</p>
+										</div>											
+									</a>
+									<a href="#"><h4 class="newfilm-link__text">Новый Бэтмен</h4></a>
+								</article>
+								<article class="newfilms__content_item">
+									<a class="newfilm-link" href="#">
+										<img src="./assets/img/hollywood.jpg" alt="мультфильм, выпуск 103" width="280" height="370">
+										<div class="newfilm-link__container">													
+											<p class="newfilm-link__text newfilm-link__text_inner">Фильм повествует о череде событий, произошедших в Голливуде в 1969 году, на закате его «золотого века». Известный актер Рик Далтон и его дублер Клифф Бут пытаются найти свое место в стремительно меняющемся мире киноиндустрии.</p>
+										</div>											
+									</a>
+									<a href="#"><h4 class="newfilm-link__text">Однажды... в Голливуде</h4></a>										
+								</article>
+								<article class="newfilms__content_item">
+									<a class="newfilm-link" href="#">
+										<img src="./assets/img/strippers.jpg" alt="мультфильм, выпуск 103" width="280" height="370">
+										<div class="newfilm-link__container">													
+											<p class="newfilm-link__text newfilm-link__text_inner">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus, repellendus aut error soluta laboriosam harum, est vitae praesentium, voluptatem quam non? Est animi deleniti laborum, sed fugit neque cum labore?</p>
+										</div>
+									</a>
+									<a href="#"><h4 class="newfilm-link__text">Стриптизёрши</h4></a>
+								</article>
+							</div>
+						</section>
+						<section class="genre">
+							<h2 class="newfilms-rubric">Жанры</h2>
+							<div class="genre-content">
+								<article class="genre-content__item">
+									<div class="genre-item-container genre-item-container_comedy">
+										<a href="#" class="genre-item-container__link">
+											<img src="./assets/img/comedies.png" alt="Комедии" width="48" height="48" class="genre-item-container__img">
+										</a>
+										<a href="#"><h4 class="genre-item-container__text">Комедии</h4></a>
+									</div>
+								</article>
+								<article class="genre-content__item">
+									<div class="genre-item-container genre-item-container_dramas">
+										<a href="#" class="genre-item-container__link">
+											<img src="./assets/img/dramas.png" alt="Драмы" width="48" height="48" class="genre-item-container__img">
+										</a>
+										<a href="#"><h4 class="genre-item-container__text">Драмы</h4></a>
+									</div>
+								</article>
+								<article class="genre-content__item">
+									<div class="genre-item-container genre-item-container_fantasy">
+										<a href="#" class="genre-item-container__link">
+											<img src="./assets/img/fantasy.png" alt="Фантастика" width="48" height="48" class="genre-item-container__img">
+										</a>
+										<a href="#"><h4 class="genre-item-container__text">Фантастика</h4></a>
+									</div>
+								</article>
+								<article class="genre-content__item">
+									<div class="genre-item-container genre-item-container_horrors">
+										<a href="#" class="genre-item-container__link">
+											<img src="./assets/img/horrors.png" alt="Ужасы" width="48" height="48" class="genre-item-container__img">
+										</a>
+										<a href="#"><h4 class="genre-item-container__text">Ужасы</h4></a>
+									</div>
+								</article>
+							</div>
+
+						</section>
+					</div>
+					<div class="tab tab-2">
+						<section class="channels">
+							<div class="channels-content">
+								<article class="channel">
+									<div class="channel__logo">
+										<img class="channel-img" src="./assets/img/1st.png" alt="Первый канал, логотип" width="50" height="64">
+									</div>
+									<div class="channel__schedule">
+										<table class="schedule-table">
+											<caption class="schedule-table__caption">Первый канал</caption>
+											<tr class="schedule-table__tr is-online">
+												<td class="schedule-table__td">13:00</td>
+												<td class="schedule-table__td">Новости (с субтитрами)</td>
+											</tr>
+											<tr class="schedule-table__tr">
+												<td class="schedule-table__td">14:00</td>
+												<td class="schedule-table__td">Давай поженимся</td>
+											</tr>
+											<tr class="schedule-table__tr">
+												<td class="schedule-table__td">15:00</td>
+												<td class="schedule-table__td">Другие новости</td>
+											</tr>
+										</table>
+									</div>
+								</article>
+								<article class="channel">
+									<div class="channel__logo">
+										<img class="channel-img" src="./assets/img/2x2.png" alt="2x2, логотип" width="114" height="49">
+									</div>
+									<div class="channel__schedule">
+										<table class="schedule-table">
+											<caption class="schedule-table__caption">2x2</caption>
+											<tr class="schedule-table__tr is-online">
+												<td class="schedule-table__td">13:00</td>
+												<td class="schedule-table__td">МУЛЬТ ТВ. Сезон 4, 7 серия</td>
+											</tr>
+											<tr class="schedule-table__tr">
+												<td class="schedule-table__td">14:00</td>
+												<td class="schedule-table__td">ПОДОЗРИТЕЛЬНАЯ СОВА. Сезон 7, 7 серия</td>
+											</tr>
+											<tr class="schedule-table__tr">
+												<td class="schedule-table__td">15:00</td>
+												<td class="schedule-table__td">БУРДАШЕВ. Сезон 1, 20 серия</td>
+											</tr>
+										</table>
+									</div>
+								</article>
+								<article class="channel">
+									<div class="channel__logo">
+										<img class="channel-img" src="./assets/img/rbc.png" alt="РБК, логотип" width="54" height="54">
+									</div>
+									<div class="channel__schedule">
+										<table class="schedule-table">
+											<caption class="schedule-table__caption">РБК</caption>
+											<tr class="schedule-table__tr is-online">
+												<td class="schedule-table__td">13:00</td>
+												<td class="schedule-table__td">ДЕНЬ. Горючая смесь: как бороться с суррогатом на АЗС</td>
+											</tr>
+											<tr class="schedule-table__tr">
+												<td class="schedule-table__td">14:00</td>
+												<td class="schedule-table__td">ДЕНЬ. Главные темы</td>
+											</tr>
+											<tr class="schedule-table__tr">
+												<td class="schedule-table__td">15:00</td>
+												<td class="schedule-table__td">Главные новости</td>
+											</tr>
+										</table>
+									</div>
+								</article>
+								<article class="channel">
+									<div class="channel__logo">
+										<img class="channel-img" src="./assets/img/amedia.png" alt="AMEDIA, логотип" width="64" height="64">
+									</div>
+									<div class="channel__schedule">
+										<table class="schedule-table">
+											<caption class="schedule-table__caption">AMEDIA PREMIUM</caption>
+											<tr class="schedule-table__tr is-online">
+												<td class="schedule-table__td">13:00</td>
+												<td class="schedule-table__td">Клиент всегда мёртв</td>
+											</tr>
+											<tr class="schedule-table__tr">
+												<td class="schedule-table__td">14:00</td>
+												<td class="schedule-table__td">Голодные игры: Сойка-пересмешница. Часть I</td>
+											</tr>
+											<tr class="schedule-table__tr">
+												<td class="schedule-table__td">15:00</td>
+												<td class="schedule-table__td">Секс в большом городе</td>
+											</tr>
+										</table>
+									</div>
+								</article>
+								<article class="channel">
+									<div class="channel__logo">
+										<img class="channel-img" src="./assets/img/amedia.png" alt="AMEDIA, логотип" width="64" height="64">
+									</div>
+									<div class="channel__schedule">
+										<table class="schedule-table">
+											<caption class="schedule-table__caption">AMEDIA PREMIUM</caption>
+											<tr class="schedule-table__tr is-online">
+												<td class="schedule-table__td">13:00</td>
+												<td class="schedule-table__td">Клиент всегда мёртв</td>
+											</tr>
+											<tr class="schedule-table__tr">
+												<td class="schedule-table__td">14:00</td>
+												<td class="schedule-table__td">Голодные игры: Сойка-пересмешница. Часть I</td>
+											</tr>
+											<tr class="schedule-table__tr">
+												<td class="schedule-table__td">15:00</td>
+												<td class="schedule-table__td">Секс в большом городе</td>
+											</tr>
+										</table>
+									</div><article class="channel">
+										<div class="channel__logo">
+											<img class="channel-img" src="./assets/img/amedia.png" alt="AMEDIA, логотип" width="64" height="64">
+										</div>
+										<div class="channel__schedule">
+											<table class="schedule-table">
+												<caption class="schedule-table__caption">AMEDIA PREMIUM</caption>
+												<tr class="schedule-table__tr is-online">
+													<td class="schedule-table__td">13:00</td>
+													<td class="schedule-table__td">Клиент всегда мёртв</td>
+												</tr>
+												<tr class="schedule-table__tr">
+													<td class="schedule-table__td">14:00</td>
+													<td class="schedule-table__td">Голодные игры: Сойка-пересмешница. Часть I</td>
+												</tr>
+												<tr class="schedule-table__tr">
+													<td class="schedule-table__td">15:00</td>
+													<td class="schedule-table__td">Секс в большом городе</td>
+												</tr>
+											</table>
+										</div>
+									</article>
+								</article>
+							</div>							
+						</section>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer-container">
+				<a class="publisher-logo" href="https://htc-cs.ru/" target="_blank">
+					<img src="./assets/img/htc.png" alt="ЦВТ логотип" width="32" height="64">
+				</a>
+				<address class="publisher-desc">
+					<p class="publisher-desc__address">426057, Россия, Удмуртская Республика, г. Ижевск, ул. Карла Маркса, 246 (ДК «Металлург»)</p>
+					<p class="publisher-desc__phones">+7 (3412) 93-88-61, 43-29-29</p>
+					<a class="publisher-desc__website" href="https://htc-cs.ru/" target="_blank">htc-cs.ru</a>
+				</address>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

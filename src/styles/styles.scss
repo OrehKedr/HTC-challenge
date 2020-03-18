@@ -1,0 +1,330 @@
+@import '~normalize.css';
+@import 'fonts.css';
+
+$header_h: 1144px;
+$header_w: 1440px;
+
+@mixin font(
+	$family: 'Rubik', 
+	$style: normal, 
+	$weight: 500, 
+	$size: 16px, 
+	$height: 19px, 
+	$color: #E5261E) {
+	font: {
+		family: $family, sans-serif;
+		style: $style;
+		weight: $weight;
+		size: $size;
+	}
+	line-height: $height;
+	color: $color;
+}
+
+a {
+	text-decoration: none;
+}
+
+.container {
+	width: $header_w;
+	height: $header_h;
+	margin: 0 auto;
+	background: #FFFFFF;
+	display: flex;
+	flex-direction: column;
+}
+
+.header-container {
+	height: 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 130px;
+}
+
+.header__column {
+	height: 37px;
+	&_col_1 {
+		flex-basis: 182px;
+	}
+	&_col_2 {
+		flex-basis: 410px;
+	}
+	&_col_3 {
+		flex-basis: 170px;
+	}
+}
+
+.header-link {
+	height: 37px;
+	display: block;
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&__logo {
+		display: block;
+		width: 36px;
+		height: 37px;
+	}
+	&__title {
+		display: block;
+		@include font($size: 20px, $height: 37px, $color: #333333);
+	}
+}
+
+.searchform {
+	&__container {
+		height: 37px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&__input {
+		width: 320px;
+		border: none;
+		border-bottom: 1px solid #333333;
+		outline: none;
+		@include font($weight: normal, $color: #828282);
+	}
+	&__button {
+		@include font();
+		border: none;
+		outline: none;
+		background-color: #FFFFFF;
+		cursor: pointer;
+		&:hover {
+			color: rgb(216, 26, 19);
+		}
+		&:active {
+			color: rgb(243, 106, 101);
+		}
+	}
+}
+.main {
+	padding: 0 130px;
+	flex-grow: 1;
+}
+.profile-container {
+	height: 37px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+
+	.profile-name {
+		width: 57px;
+		@include font($color: #333333);
+	}
+
+	.profile-button {
+		width: 113px;	
+		height: 38px;			
+		@include font($color: #FFFFFF);
+		background: #E5261E;
+		border-radius: 4px;
+		outline: none;
+		cursor: pointer;
+		&:hover {
+			background: rgb(216, 26, 19);
+		}
+		&:active {
+			background: rgb(243, 106, 101);
+		}
+	}
+}
+.tabs__nav {
+	margin: 0 435px 32px;
+}
+.tabs-nav {
+	display: flex;
+	justify-content: space-around;
+	&__item {
+		border-bottom: 1px solid transparent;
+		cursor: pointer;
+		@include font($size: 28px, $height: 33px, $color: #333333);
+		padding-bottom: 9px;
+
+		&.is-active {
+			border-bottom: 2px solid #E5261E;
+			color: #E5261E;
+		}
+	}
+}
+
+.tab {
+	display: none;
+	&.is-active { display: block; }
+}
+
+.newfilms-rubric {
+	margin: 22px 0;
+	@include font($size: 24px, $height: 28px, $color: #333333);
+	&_img {
+		padding-left: 36px;
+		background: url("../assets/img/flame.png") no-repeat left center;
+	}
+}
+
+.newfilms-content {
+	display: flex;
+	justify-content: space-between;
+	&__item	{
+		flex-basis: 280px;
+	}
+	.newfilm-link {
+		width: 280px;
+		display: block;
+		position: relative;
+		border-radius: 8px;
+		box-sizing: border-box;
+		overflow: hidden;
+		&__container {
+			width: 280px;
+			height: 370px;
+			position: absolute;
+			bottom: 4px;						
+			padding: 16px;
+			border-radius: 8px;
+			box-sizing: border-box;			
+			overflow: hidden;
+			background: rgba(51, 51, 51, 0.8);
+			display: none;
+		}
+		&__text {
+			margin: 16px 0 0 0;
+			@include font($weight: normal, $size: 20px, $height: 24px, $color: #333333);
+			&_inner {
+				@include font($weight: normal, $height: 140%, $color: #F2F2F2);
+			}
+		}
+		&:hover .newfilm-link__container {
+			display: block;
+		}
+	}
+}
+
+.genre-content {
+	display: flex;
+	justify-content: space-between;
+	&__item {
+		flex-basis: 280px;
+	}
+	.genre-item-container {
+		width: 280px;
+		height: 208px;
+		text-align: center;
+		border-radius: 6px;
+		box-shadow: inset 0px 0px 16px rgba(0, 0, 0, 0.15);
+		box-sizing: border-box;
+		opacity: 0.8;
+		&_comedy {
+			background: linear-gradient(136.27deg, #F2C94C 8.44%, #F29A4A 91.36%);
+		}
+		&_dramas {
+			background: linear-gradient(136.27deg, #F2994A 8.44%, #EB5757 91.36%);
+		}
+		&_fantasy {
+			background: linear-gradient(136.27deg, #56CCF2 8.44%, #2F80ED 91.36%);
+		}
+		&_horrors {
+			background: linear-gradient(136.27deg, #828282 8.44%, #333333 91.36%);
+		}
+		&:hover {
+			opacity: 1;
+		}
+		&__link {
+			width: 280px;
+			height: 208px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		&__img {
+			width: 48px;
+			height: 48px;			
+		}
+		&__text {
+			margin: -40px 0 0 0;
+			@include font($weight: normal, $size: 20px, $height: 24px, $color: #FFFFFF);
+		}
+	}
+}
+
+.channels-content {
+	height: 768px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	min-height: 0;
+	overflow: auto;
+	.channel {
+		flex-basis: 150px;
+		background: #F2F2F2;
+		border-radius: 8px;
+		margin: 0 8px 16px 0;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		&__logo {
+			width: 400px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		&__schedule {
+			width: 780px;
+			padding: 21px 0;
+		}
+		.schedule-table {
+			border-collapse: collapse; 
+			&__caption {
+				margin-bottom: 17px;
+				text-align: left;
+				@include font($size: 20px, $height: 24px, $color: #333333);
+			}
+			&__tr {				
+				@include font($weight: normal, $size: 16px, $height: 19px, $color: #333333);
+			}
+			&__td {
+				padding: 0 16px 12px 0;
+			}
+			.is-online {
+				@include font($weight: normal, $size: 16px, $height: 19px);
+			}
+		}
+	}
+}
+
+.footer {
+	padding: 0 130px;
+	background: #F2F2F2;
+}
+
+.footer-container {
+	height: 120px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	.publisher-logo {
+		width: 72px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
+.publisher-desc {
+	font-style: normal;
+	&__address {
+		margin: 0 0 6px 0;
+		@include font($weight: normal, $size: 16px, $height: 19px, $color: #333333);
+	}
+	&__phones {
+		margin: 0 0 10px 0;
+		@include font($weight: normal, $size: 16px, $height: 19px, $color: #333333);
+	}
+	&__website {
+		text-decoration: none;
+		@include font($size: 16px, $height: 19px, $color: #1F4766);
+	}
+}
