@@ -2,7 +2,7 @@
 Introductory task.  
 Сайт опубликован и доступен для тестирования.  
 <https://orehkedr.github.io/cinema/?#>  
-Это особенно актуально для браузеров Internet Explorer 11, edge() потому что:  
+Это особенно актуально для браузеров Internet Explorer 11, edge потому что:  
 > In IE attempting to access localStorage on HTML files served from the file system results in the localStorage object being undefined  
   
 ## Требованя к окружающей среде  
