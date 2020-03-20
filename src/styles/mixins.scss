@@ -1,0 +1,50 @@
+@import 'fonts.css';
+
+@mixin font(
+	$family: 'Rubik', 
+	$style: normal, 
+	$weight: 500, 
+	$size: 16px, 
+	$height: 19px, 
+	$color: #E5261E) {
+	font: {
+		family: $family, sans-serif;
+		style: $style;
+		weight: $weight;
+		size: $size;
+	}
+	line-height: $height;
+	color: $color;
+}
+
+@mixin thick-red-btn(){
+	display: block;
+	width: 113px;	
+	height: 38px;
+	text-align: center;	
+	@include font($color: #FFFFFF, $height: 38px);
+	background: #E5261E;
+	border-radius: 4px;
+	outline: none;
+	text-decoration: none;
+	&:hover {
+		background: #CC221B;
+	}
+	&:active {
+		background: rgb(243, 106, 101);
+	}
+}
+
+@mixin thin-red-btn(){
+	@include font();
+	border: none;
+	outline: none;
+	background-color: #FFFFFF;
+	cursor: pointer;
+	&:hover {
+		color: rgb(216, 26, 19);
+	}
+	&:active {
+		color: rgb(243, 106, 101);
+	}
+}

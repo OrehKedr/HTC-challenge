@@ -1,28 +1,15 @@
 @import '~normalize.css';
-@import 'fonts.css';
+@import 'mixins.scss';
 
 $header_h: 1144px;
 $header_w: 1440px;
 
-@mixin font(
-	$family: 'Rubik', 
-	$style: normal, 
-	$weight: 500, 
-	$size: 16px, 
-	$height: 19px, 
-	$color: #E5261E) {
-	font: {
-		family: $family, sans-serif;
-		style: $style;
-		weight: $weight;
-		size: $size;
-	}
-	line-height: $height;
-	color: $color;
-}
-
 a {
 	text-decoration: none;
+}
+
+.hidden {
+	display: none !important;
 }
 
 .container {
@@ -76,7 +63,8 @@ a {
 
 .searchform {
 	&__container {
-		height: 37px;
+		width: 402px;
+		height: 37px;		
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -86,56 +74,51 @@ a {
 		border: none;
 		border-bottom: 1px solid #333333;
 		outline: none;
-		@include font($weight: normal, $color: #828282);
+		@include font($weight: normal, $color: #333333);
 	}
 	&__button {
-		@include font();
-		border: none;
-		outline: none;
-		background-color: #FFFFFF;
-		cursor: pointer;
-		&:hover {
-			color: rgb(216, 26, 19);
-		}
-		&:active {
-			color: rgb(243, 106, 101);
-		}
+		@include thin-red-btn();
 	}
 }
+
+.profile-container {
+	height: 37px;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	.profile-name {
+		width: 16px;
+		text-align: right;
+		visibility: hidden;
+		padding-right: 16px;
+		box-sizing: border-box;
+		&.is-filled {
+			width: 120px;
+			border: none;
+			outline: none;
+			visibility: visible;
+			@include font($color: #333333);
+		}
+	}
+	.profile-btn {
+		@include thick-red-btn();
+	}
+
+	.profile-btn-exit {
+		display: block;
+		@include thin-red-btn();
+	}
+}
+
 .main {
 	padding: 0 130px;
 	flex-grow: 1;
 }
-.profile-container {
-	height: 37px;
-	display: flex;
-	align-items: center;
-	justify-content: flex-end;
 
-	.profile-name {
-		width: 57px;
-		@include font($color: #333333);
-	}
-
-	.profile-button {
-		width: 113px;	
-		height: 38px;			
-		@include font($color: #FFFFFF);
-		background: #E5261E;
-		border-radius: 4px;
-		outline: none;
-		cursor: pointer;
-		&:hover {
-			background: rgb(216, 26, 19);
-		}
-		&:active {
-			background: rgb(243, 106, 101);
-		}
-	}
-}
 .tabs__nav {
 	margin: 0 435px 32px;
 }
+
 .tabs-nav {
 	display: flex;
 	justify-content: space-around;
@@ -255,17 +238,15 @@ a {
 	height: 768px;
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-start;
 	min-height: 0;
 	overflow: auto;
-	.channel {
-		flex-basis: 150px;
+	.channel {		
+		flex: 1 0 auto; //IE bugfix
 		background: #F2F2F2;
 		border-radius: 8px;
 		margin: 0 8px 16px 0;
 		display: flex;
 		flex-direction: row;
-		justify-content: flex-start;
 		&__logo {
 			width: 400px;
 			display: flex;
@@ -304,7 +285,6 @@ a {
 .footer-container {
 	height: 120px;
 	display: flex;
-	justify-content: flex-start;
 	align-items: center;
 	.publisher-logo {
 		width: 72px;
@@ -313,6 +293,7 @@ a {
 		justify-content: center;
 	}
 }
+
 .publisher-desc {
 	font-style: normal;
 	&__address {

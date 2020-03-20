@@ -1,0 +1,86 @@
+@import 'mixins.scss';
+@import 'placeholder.css';
+
+$width: 304px;
+$height: 394px;
+
+.body-lock {
+  overflow-y: hidden;
+  position: fixed;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgba(51, 51, 51, 0.6);
+  &-open {
+    display: flex;
+  }
+}
+
+.modal__content {
+  width: $width;
+  height: $height;
+
+  padding: 36px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .modal-item {
+    &__caption {
+      text-align: center;
+      padding-bottom: 24px;
+      @include font($size: 28px, $height: 33px, $color: #333333);
+    }
+    &__text {
+      width: 232px;
+      height: 25px;
+      @include font($color: #333333);
+      border: none;
+      outline: none;
+      border-bottom: 1px solid #333333;
+      margin-bottom: 24px;
+    }
+    &__cookie {
+      padding-bottom: 24px;
+    }
+    &__enter {
+      @include thick-red-btn();
+    }
+  }
+
+  .modal-item__cookie {
+    display: none;
+    & + label {
+      display: block;
+      width: 232px;
+      height: 25px;
+      margin-bottom: auto;
+      @include font($weight: normal, $color: #333333);
+    }
+    & + label span {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      margin: -3px 8px 0 0;
+      vertical-align: middle;
+      background: url("../assets/img/checkbox-sprite.png")  -10px -10px no-repeat;
+      cursor: pointer;
+    }
+    &:checked + label span {
+      background: url("../assets/img/checkbox-sprite.png")  -46px -10px no-repeat;
+    }
+  }
+}

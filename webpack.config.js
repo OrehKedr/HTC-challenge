@@ -96,7 +96,7 @@ const imgLoaders = compress => {
   }
 
   if (compress) {
-    loaders.push(imgWebpackLoader)
+    // loaders.push(imgWebpackLoader)
   }
 
   return loaders

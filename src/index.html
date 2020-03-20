@@ -4,7 +4,6 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="format-detection" content="telephone=no">
-	<meta http-equiv="x-rim-auto-match" content="none">
 	<link rel="icon" href="favicon.ico" type="image/ico">
 	<title>Видеосервис</title>
 </head>
@@ -19,7 +18,6 @@
 							<span class="header-link__title">Видеосервис</span>
 						</div>						
 					</a>
-					<!-- <a href="#" class="header-link">Видеосервис</a> -->
 				</div>
 				<div class="header__column header__column_col_2">
 					<form id="search-form" action="#" class="searchform">
@@ -31,8 +29,9 @@
 				</div>
 				<div class="header__column header__column_col_3">
 					<div class="profile-container">
-						<div class="profile-name"></div>
-						<button class="profile-button">Войти</button>
+						<input class="profile-name" id="inputProfName" type="text" placeholder="">
+						<a href="#" class="profile-btn" id="btnOpenModalLogin">Войти</a>
+						<a href="#" class="profile-btn-exit hidden" id="btnExitProfile">Выйти</a>
 					</div>
 				</div>
 			</div>
@@ -279,5 +278,15 @@
 			</div>
 		</footer>
 	</div>
+	<div id="modal" class="modal">
+    <div class="modal__content modal-item">
+			<span class="modal-item__caption">Вход</span>
+			<input class="modal-item__text" id="inputUserName" type="text" placeholder="Логин">
+			<input class="modal-item__text" id="inputUserPass" type="text" placeholder="Пароль">
+			<input class="modal-item__cookie" type="checkbox" id="cookie">
+			<label for="cookie"><span></span>Запомнить</label>
+			<a href="#" class="modal-item__enter" id="btnConfirmModalLogin">Войти</a>
+		</div>
+  </div>
 </body>
 </html>
