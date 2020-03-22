@@ -92,8 +92,10 @@ a {
 		visibility: hidden;
 		padding-right: 16px;
 		box-sizing: border-box;
-		&.is-filled {
-			width: 120px;
+		&.is-filled {	
+			width: 235px;
+			position: absolute;		
+			transform: translate(-50px, 0px);		
 			border: none;
 			outline: none;
 			visibility: visible;

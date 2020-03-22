@@ -22,14 +22,14 @@
 				<div class="header__column header__column_col_2">
 					<form id="search-form" action="#" class="searchform">
 						<div class="searchform__container">
-							<input type="text" class="searchform__input" placeholder="Поиск...">
+							<input type="text" class="searchform__input" placeholder="Поиск..." maxlength="40">
 							<button class="searchform__button" aria-label="Введите запрос">Найти</button>
 						</div>
 					</form>
 				</div>
 				<div class="header__column header__column_col_3">
 					<div class="profile-container">
-						<input class="profile-name" id="inputProfName" type="text" placeholder="">
+						<input class="profile-name" id="inputProfName" type="text" placeholder="" maxlength="24">
 						<a href="#" class="profile-btn" id="btnOpenModalLogin">Войти</a>
 						<a href="#" class="profile-btn-exit hidden" id="btnExitProfile">Выйти</a>
 					</div>
@@ -279,14 +279,14 @@
 		</footer>
 	</div>
 	<div id="modal" class="modal">
-    <div class="modal__content modal-item">
+    <form class="modal__content modal-item">
 			<span class="modal-item__caption">Вход</span>
-			<input class="modal-item__text" id="inputUserName" type="text" placeholder="Логин">
-			<input class="modal-item__text" id="inputUserPass" type="text" placeholder="Пароль">
+			<input class="modal-item__text" id="inputUserName" type="text" placeholder="Логин" maxlength="24">
+			<input class="modal-item__text" id="inputUserPass" type="password" placeholder="Пароль" maxlength="24">
 			<input class="modal-item__cookie" type="checkbox" id="cookie">
 			<label for="cookie"><span></span>Запомнить</label>
 			<a href="#" class="modal-item__enter" id="btnConfirmModalLogin">Войти</a>
-		</div>
+		</form>
   </div>
 </body>
 </html>

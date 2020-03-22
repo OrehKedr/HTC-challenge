@@ -33,14 +33,14 @@ export default class SessionStorageManager {
     let key = this.userInfo.key
     
     if (actionName == 'exit') {
-      document.getElementById('inputProfName').value = ''
+      inputProfName.value = ''
       this.changeCSS('exit')
       return
     }
 
     if (this.include(key)) {
       this.userInfo.keyValue = sessionStorage.getItem(key)
-      document.getElementById('inputProfName').value = this.userInfo.keyValue
+      inputProfName.value = this.userInfo.keyValue
       this.changeCSS()
     }
   }
@@ -57,19 +57,15 @@ export default class SessionStorageManager {
   }
 
   changeCSS(actionName) {
-    const elemInput = document.getElementById('inputProfName')
-    const elemBtnOpen = document.getElementById('btnOpenModalLogin')
-    const elemBtnExit = document.getElementById('btnExitProfile')
-
     if (actionName == 'exit') {
-      elemInput.classList.remove('is-filled')
-      elemBtnOpen.classList.remove('hidden')
-      elemBtnExit.classList.add('hidden')
+      inputProfName.classList.remove('is-filled')
+      btnOpenModalLogin.classList.remove('hidden')
+      btnExitProfile.classList.add('hidden')
       return
     }
 
-    elemInput.classList.add('is-filled')
-    elemBtnOpen.classList.add('hidden')
-    elemBtnExit.classList.remove('hidden')
+    inputProfName.classList.add('is-filled')
+    btnOpenModalLogin.classList.add('hidden')
+    btnExitProfile.classList.remove('hidden')
   }
 }
