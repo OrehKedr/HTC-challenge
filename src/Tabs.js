@@ -1,3 +1,5 @@
+import Scrollbar from './Scrollbar'
+
 export default class Tabs {
 	constructor() {
 		this.tabNav = document.querySelectorAll('.tabs-nav__item')
@@ -34,5 +36,9 @@ export default class Tabs {
 		this.tabContent.forEach(item => {
 				item.classList.contains(tabName) ? item.classList.add('is-active') : item.classList.remove('is-active')
 		})
+
+		if (tabName == 'tab-2') {
+			window.Scrollbar.init()
+		}
 	}
 }

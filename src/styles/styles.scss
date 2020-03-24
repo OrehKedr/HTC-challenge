@@ -236,12 +236,17 @@ a {
 	}
 }
 
+.channels {
+	height: 696px;
+	display: flex;
+}
+
 .channels-content {
-	height: 768px;
+	height: 100%;
 	display: flex;
 	flex-direction: column;
-	min-height: 0;
-	overflow: auto;
+	min-height: 0; //bugfix
+	overflow: hidden;
 	.channel {		
 		flex: 1 0 auto; //IE bugfix
 		background: #F2F2F2;
@@ -257,7 +262,7 @@ a {
 		}
 		&__schedule {
 			width: 780px;
-			padding: 21px 0;
+			padding: 21px 0 7px 0;
 		}
 		.schedule-table {
 			border-collapse: collapse; 

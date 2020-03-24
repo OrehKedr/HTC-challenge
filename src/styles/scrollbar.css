@@ -19,3 +19,53 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #A19C9C;
 }
+
+div.scroll {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow: auto;
+  height: 696px;
+}
+
+.scroll-handle {
+  width: 90%;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0%;
+  background: #BDBDBD;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+
+.scroll-handle:hover {
+  background: #A19C9C;
+}
+
+.scroll-handle.clicked {
+  /* background: #4D4D4D; */
+}
+
+.scroll-tray {
+  display: block;
+  position: relative;
+  top: 0;
+  right: 0;
+  padding: 0;
+  margin: 0;
+  height: 696px;
+  width: 8px;
+  border-radius: 2px;
+  box-sizing: border-box;
+  background: #F2F2F2;
+  transition: background ease 250ms;
+}
+
+.scroll-tray:hover {
+}
+
+.scroll-tray.clicked {
+}
+
