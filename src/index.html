@@ -11,23 +11,25 @@
 	<div class="container">
 		<header class="header">
 			<div class="header-container">
-				<div class="header__column header__column_col_1">
-					<a href="#" class="header-link">
-						<div class="header-link__container">
-							<img src="./assets/img/videoservice.jpg" class="header-link__logo" alt="Логотип Видеосервис" width="36" height="37">
-							<span class="header-link__title">Видеосервис</span>
-						</div>						
-					</a>
+				<div class="header__col-1 ">
+					<div class="header__sub-col">
+						<a href="#" class="header-link">
+							<div class="header-link__container">
+								<img src="./assets/img/videoservice.jpg" class="header-link__logo" alt="Логотип Видеосервис" width="36" height="37">
+								<span class="header-link__title">Видеосервис</span>
+							</div>						
+						</a>
+					</div>
+					<div class="header__sub-col">
+						<form id="search-form" action="#" class="searchform">
+							<div class="searchform__container">
+								<input type="text" class="searchform__input" placeholder="Поиск..." maxlength="40">
+								<button class="searchform__button" aria-label="Введите запрос">Найти</button>
+							</div>
+						</form>
+					</div>
 				</div>
-				<div class="header__column header__column_col_2">
-					<form id="search-form" action="#" class="searchform">
-						<div class="searchform__container">
-							<input type="text" class="searchform__input" placeholder="Поиск..." maxlength="40">
-							<button class="searchform__button" aria-label="Введите запрос">Найти</button>
-						</div>
-					</form>
-				</div>
-				<div class="header__column header__column_col_3">
+				<div class="header__col-2">
 					<div class="profile-container">
 						<input class="profile-name" id="inputProfName" type="text" placeholder="" maxlength="24">
 						<a href="#" class="profile-btn" id="btnOpenModalLogin">Войти</a>
