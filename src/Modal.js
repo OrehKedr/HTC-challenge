@@ -39,6 +39,7 @@ export default class Modal {
   addBtnConfirmHandlers() {
     btnConfirmModalLogin.addEventListener('click', e => {
       e.preventDefault()
+      let inputUserName = document.getElementById('inputUserName') //Fix for IE
       this.storageManager.setItem(inputUserName.value)
       this.storageManager.restoreFromStorage('confirm')
       this.changeCSS('confirm')
@@ -49,6 +50,7 @@ export default class Modal {
     inputProfName.addEventListener('blur', e => {
       console.log('Событие blur')
       e.preventDefault()
+      let inputProfName = document.getElementById('inputProfName') //Fix for IE
       this.storageManager.setItem(inputProfName.value)
     })
   }
